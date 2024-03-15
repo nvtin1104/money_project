@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Outlet, useRoutes } from "react-router-dom";
-import { DashboardLayout } from "../layout";
 import { Dashboard } from "../pages/Dashboard";
 import { UserIndexPages } from "../pages/User";
+import DashboardLayout from "../layout";
 
 const DashboardRoute = () => {
     let route = useRoutes([
