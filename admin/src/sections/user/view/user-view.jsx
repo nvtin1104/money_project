@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
@@ -21,6 +21,9 @@ import UserTableHead from '../user-table-head';
 import TableEmptyRows from '../table-empty-rows';
 import UserTableToolbar from '../user-table-toolbar';
 import { emptyRows, applyFilter, getComparator } from '../utils';
+import { useDispatch } from 'react-redux';
+import { fetchAllUsers } from 'src/redux/slices/usersSlice';
+import axios from 'axios';
 
 // ----------------------------------------------------------------------
 
@@ -36,6 +39,19 @@ export default function UserPage() {
   const [filterName, setFilterName] = useState('');
 
   const [rowsPerPage, setRowsPerPage] = useState(5);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchAllUsers());
+    // axios.get('http://localhost:3000/users')
+    //   .then((response) => {
+    //     console.log(response.data);
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
+  }, [dispatch]);
 
   const handleSort = (event, id) => {
     const isAsc = orderBy === id && order === 'asc';

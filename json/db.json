@@ -1,0 +1,202 @@
+{
+  "products": [
+    {
+      "id": "0dbe",
+      "name": "123",
+      "price": "123",
+      "description": "123"
+    },
+    {
+      "name": "124124",
+      "price": "124",
+      "description": "124",
+      "id": "338a"
+    },
+    {
+      "id": "68ad",
+      "name": "123",
+      "price": "123",
+      "description": "123"
+    },
+    {
+      "id": "8c63",
+      "name": "123",
+      "price": "123",
+      "description": "123"
+    },
+    {
+      "id": "0320",
+      "name": "12312",
+      "price": "123",
+      "description": "123"
+    },
+    {
+      "id": "8971",
+      "name": "12312",
+      "price": "1",
+      "description": "123"
+    },
+    {
+      "id": "118d",
+      "name": "12312",
+      "price": "1",
+      "description": "123"
+    },
+    {
+      "id": "d119",
+      "name": "12312",
+      "price": "2",
+      "description": "123"
+    },
+    {
+      "id": "c9c2",
+      "name": "12312",
+      "price": "412",
+      "description": "123"
+    },
+    {
+      "name": "Nguyễn Văn Tín",
+      "price": "1",
+      "description": "123132",
+      "id": "d9b7"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Anna Smith",
+      "password": "password123",
+      "email": "anna.smith@example.com",
+      "token": "abc123",
+      "role": "user",
+      "phone": "987654321",
+      "address": "123 Main Street",
+      "status": "active",
+      "created_at": "2022-01-15T12:00:00.000Z",
+      "updated_at": "",
+      "gender": "female",
+      "birthday": "1990-05-20T00:00:00.000Z",
+      "avatar": "https://randomuser.me/api/portraits/women/1.jpg",
+      "active_at": "2024-03-28T08:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "name": "John Doe",
+      "password": "securepass",
+      "email": "john.doe@example.com",
+      "token": "xyz789",
+      "role": "user",
+      "phone": "123456789",
+      "address": "456 Oak Avenue",
+      "status": "active",
+      "created_at": "2023-02-10T10:00:00.000Z",
+      "updated_at": "",
+      "gender": "male",
+      "birthday": "1985-10-15T00:00:00.000Z",
+      "avatar": "https://randomuser.me/api/portraits/men/2.jpg",
+      "active_at": "2024-03-29T08:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "name": "Emily Johnson",
+      "password": "pass1234",
+      "email": "emily.johnson@example.com",
+      "token": "def456",
+      "role": "user",
+      "phone": "5551234567",
+      "address": "789 Elm Street",
+      "status": "active",
+      "created_at": "2023-05-05T08:00:00.000Z",
+      "updated_at": "",
+      "gender": "female",
+      "birthday": "1988-12-03T00:00:00.000Z",
+      "avatar": "https://randomuser.me/api/portraits/women/3.jpg",
+      "active_at": "2024-03-30T08:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "name": "Michael Brown",
+      "password": "mike123",
+      "email": "michael.brown@example.com",
+      "token": "ghi789",
+      "role": "user",
+      "phone": "123987654",
+      "address": "321 Pine Street",
+      "status": "active",
+      "created_at": "2023-08-20T12:00:00.000Z",
+      "updated_at": "",
+      "gender": "male",
+      "birthday": "1992-07-18T00:00:00.000Z",
+      "avatar": "https://randomuser.me/api/portraits/men/4.jpg",
+      "active_at": "2024-04-01T08:00:00.000Z"
+    },
+    {
+      "id": "5",
+      "name": "Sophia Martinez",
+      "password": "sophia789",
+      "email": "sophia.martinez@example.com",
+      "token": "jkl012",
+      "role": "user",
+      "phone": "789456123",
+      "address": "654 Maple Street",
+      "status": "active",
+      "created_at": "2023-11-12T08:00:00.000Z",
+      "updated_at": "",
+      "gender": "female",
+      "birthday": "1995-03-25T00:00:00.000Z",
+      "avatar": "https://randomuser.me/api/portraits/women/5.jpg",
+      "active_at": "2024-04-01T08:00:00.000Z"
+    },
+    {
+      "id": "6",
+      "name": "Daniel Wilson",
+      "password": "dannyboy",
+      "email": "daniel.wilson@example.com",
+      "token": "mno345",
+      "role": "user",
+      "phone": "369852147",
+      "address": "987 Cedar Street",
+      "status": "active",
+      "created_at": "2024-01-03T12:00:00.000Z",
+      "updated_at": "",
+      "gender": "male",
+      "birthday": "1980-09-08T00:00:00.000Z",
+      "avatar": "https://randomuser.me/api/portraits/men/6.jpg",
+      "active_at": "2024-04-01T08:00:00.000Z"
+    },
+    {
+      "id": "7",
+      "name": "Olivia Taylor",
+      "password": "olivia123",
+      "email": "olivia.taylor@example.com",
+      "token": "pqr678",
+      "role": "user",
+      "phone": "147258369",
+      "address": "852 Willow Street",
+      "status": "active",
+      "created_at": "2024-02-18T08:00:00.000Z",
+      "updated_at": "",
+      "gender": "female",
+      "birthday": "1983-11-30T00:00:00.000Z",
+      "avatar": "https://randomuser.me/api/portraits/women/7.jpg",
+      "active_at": "2024-04-01T08:00:00.000Z"
+    },
+    {
+      "id": "8",
+      "name": "William Anderson",
+      "password": "william789",
+      "email": "william.anderson@example.com",
+      "token": "stu901",
+      "role": "user",
+      "phone": "258369147",
+      "address": "369 Pine Street",
+      "status": "active",
+      "created_at": "2024-03-10T08:00:00.000Z",
+      "updated_at": "",
+      "gender": "male",
+      "birthday": "1987-04-12T00:00:00.000Z",
+      "avatar": "https://randomuser.me/api/portraits/men/8.jpg",
+      "active_at": "2024-04-01T08:00:00.000Z"
+    }
+  ]  
+}

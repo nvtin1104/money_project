@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable perfectionist/sort-imports */
 import 'src/global.css';
 
