@@ -7,18 +7,21 @@ import { HelmetProvider } from 'react-helmet-async';
 
 import App from './app';
 import store from './redux/store';
+import { UserProvider } from './context/user.context';
 
 // ----------------------------------------------------------------------
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <HelmetProvider>
-    <Provider store={store}>
-      <BrowserRouter>
-        <Suspense>
-          <App />
-        </Suspense>
-      </BrowserRouter>
-    </Provider>
+    {/* <Provider store={store}> */}
+      <UserProvider>
+        <BrowserRouter>
+          <Suspense>
+            <App />
+          </Suspense>
+        </BrowserRouter>
+      </UserProvider>
+    {/* </Provider> */}
   </HelmetProvider>
 );

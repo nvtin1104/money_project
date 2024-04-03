@@ -1,4 +1,7 @@
-import { useEffect, useState } from 'react';
+/* eslint-disable import/no-unresolved */
+import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { useState, useEffect } from 'react';
 
 import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
@@ -10,7 +13,7 @@ import Typography from '@mui/material/Typography';
 import TableContainer from '@mui/material/TableContainer';
 import TablePagination from '@mui/material/TablePagination';
 
-import { users } from 'src/_mock/user';
+// eslint-disable-next-line import/no-unresolved
 
 import Iconify from 'src/components/iconify';
 import Scrollbar from 'src/components/scrollbar';
@@ -21,9 +24,6 @@ import UserTableHead from '../user-table-head';
 import TableEmptyRows from '../table-empty-rows';
 import UserTableToolbar from '../user-table-toolbar';
 import { emptyRows, applyFilter, getComparator } from '../utils';
-import { useDispatch } from 'react-redux';
-import { fetchAllUsers } from 'src/redux/slices/usersSlice';
-import axios from 'axios';
 
 // ----------------------------------------------------------------------
 
@@ -40,18 +40,27 @@ export default function UserPage() {
 
   const [rowsPerPage, setRowsPerPage] = useState(5);
 
-  const dispatch = useDispatch();
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    dispatch(fetchAllUsers());
-    // axios.get('http://localhost:3000/users')
-    //   .then((response) => {
-    //     console.log(response.data);
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
-  }, [dispatch]);
+    axios
+      .get('http://localhost:3000/users')
+      .then((response) => {
+        // handle success
+        setUsers(response.data);
+      })
+      .catch((error) => {
+        // handle error
+        console.log(error);
+      })
+      .finally(() => {
+        // always executed
+      });
+  }, []);
+
+  // useEffect(() => {
+  //   dispatch(fetchAllUsers());
+  // }, [dispatch]);
 
   const handleSort = (event, id) => {
     const isAsc = orderBy === id && order === 'asc';
@@ -139,9 +148,9 @@ export default function UserPage() {
                 onSelectAllClick={handleSelectAllClick}
                 headLabel={[
                   { id: 'name', label: 'Name' },
-                  { id: 'company', label: 'Company' },
+                  { id: 'email', label: 'Email' },
                   { id: 'role', label: 'Role' },
-                  { id: 'isVerified', label: 'Verified', align: 'center' },
+                  { id: 'gender', label: 'Gender', align: 'center' },
                   { id: 'status', label: 'Status' },
                   { id: '' },
                 ]}
@@ -155,9 +164,9 @@ export default function UserPage() {
                       name={row.name}
                       role={row.role}
                       status={row.status}
-                      company={row.company}
-                      avatarUrl={row.avatarUrl}
-                      isVerified={row.isVerified}
+                      email={row.email}
+                      avatarUrl={row.avatar}
+                      gender={row.gender}
                       selected={selected.indexOf(row.name) !== -1}
                       handleClick={(event) => handleClick(event, row.name)}
                     />
